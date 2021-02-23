@@ -16,7 +16,7 @@ namespace _210223_Syntra_NETCORE_opdracht.Controllers
 
         public ActionResult<int> LeesHetGetal()
         {
-            string text = System.IO.File.ReadLines(@"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\MijnGetal.txt").First();
+            string text = System.IO.File.ReadLines(@"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\getal.txt").First();
 
             if (text == null)
             {
@@ -35,7 +35,7 @@ namespace _210223_Syntra_NETCORE_opdracht.Controllers
         public ActionResult<int> SchrijfHetGetal(string aText)
         {
             // Store the path of the textfile in your system 
-            string file = @"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\MijnGetal.txt";
+            string file = @"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\getal.txt";
 
             // To write all of the text to the file
             System.IO.File.WriteAllText(file, aText);
@@ -52,11 +52,11 @@ namespace _210223_Syntra_NETCORE_opdracht.Controllers
             int randomnumber = random.Next(10);
 
             // Store the path of the textfile in your system 
-            string file = @"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\MijnGetal.txt";
+            string file = @"C:\Users\emese\source\repos\210223_Syntra_NETCORE_opdracht\210223_Syntra_NETCORE_opdracht\TextFile\getal.txt";
 
             // To write all of the text to the file
             System.IO.File.WriteAllText(file, Convert.ToString(randomnumber));
-            return Ok(Convert.ToInt32(randomnumber));
+            return Ok(randomnumber);
         }
 
 
