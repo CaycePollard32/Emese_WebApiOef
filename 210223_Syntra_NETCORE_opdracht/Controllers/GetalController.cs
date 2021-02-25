@@ -57,6 +57,7 @@ namespace _210223_Syntra_NETCORE_opdracht.Controllers
             // To write all of the text to the file
             System.IO.File.WriteAllText(file, Convert.ToString(randomnumber));
             return Ok(randomnumber);
+
         }
 
 
